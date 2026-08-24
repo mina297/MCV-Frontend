@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+    min-height: 110vh;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e7e4dc;
+  color: #111;
+}
+
+.board {
+  min-height: 100vh;
+  position: relative;
+  padding: 54px 36px 28px;
+}
+
+.board-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 34px;
+  background: #0b0b0b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  max-width: calc(100vw - 72px);
+  margin: 0 auto 14px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+.board-header h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.notes-area {
+  position: relative;
+  min-height: calc(100vh - 140px);
+}
+
+.note {
+  position: absolute;
+  width: 118px;
+  height: 118px;
+  background: #f1e35a;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+}
+
+.note p {
+  margin: 0;
+  padding: 10px 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.note-1 {
+  left: 34px;
+  top: -1px;
+}
+
+.note-2 {
+  left: 112px;
+  top: 58px;
+}
+
+.note-3 {
+  left: 34px;
+  top: 240px;
+}
+
+.help-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 22px;
+  border: none;
+  background: #c91a1a;
+  color: #fff;
+  padding: 7px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+}
