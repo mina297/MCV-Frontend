@@ -1,0 +1,138 @@
+/* =========================
+   PhotoFolio – General
+   ========================= */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar { background-color: black; }
+.logo-text {
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+.nav-link { color: #999; font-size: 15px; }
+.nav-link:hover { color: white; }
+.nav-link.active { color: white !important; }
+.social-icons a {
+  color: #aaa;
+  font-size: 18px;
+}
+.social-icons a:hover { color: white; }
+
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: 46px;
+  font-weight: bold;
+}
+.hero h1 span {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 10px;
+  background-color: #27a776;
+  z-index: -1;
+}
+.hero p {
+  color: #aaa;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+.hire-button {
+  background-color: #27a776;
+  color: white;
+  padding: 14px 40px;
+  font-size: 14px;
+}
+.hire-button:hover { background-color: #209768; }
+
+/* =========================
+   GALLERY
+   ========================= */
+.gallery-section { padding-bottom: 70px; }
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gallery-item img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.gallery-overlay i { color: white; font-size: 28px; }
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background-color: #111;
+  border-top: 1px solid #333;
+  padding-top: 55px;
+  padding-bottom: 45px;
+}
+footer p { margin-bottom: 10px; }
+.footer-social a {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.footer-social a:hover { color: white; border-color: white; }
+
+/* =========================
+   MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  .hero { padding-top: 80px; padding-bottom: 80px; }
+  .hero h1 { font-size: 34px; }
+  .hero p { font-size: 16px; }
+  .social-icons { margin-top: 20px; }
+  .gallery-item img { height: 250px; }
+}
