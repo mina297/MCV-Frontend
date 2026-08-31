@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magic Fortune Button</title>
+</head>
+<body>
+
+  <h1>Magic Fortune Button 🧙‍♂️</h1>
+  <button onclick="changeFortune()">Get Your Fortune 🔮</button>
+  <p id="fortune-text">You will dream in JavaScript tonight.</p>
+
+  <script>
+    // Array of fortunes/quotes
+    const fortunes = [
+      "You will dream in JavaScript tonight.",
+      "A bug-free day is coming your way.",
+      "You will find the semicolon you've been looking for.",
+      "Great CSS styling is in your future.",
+      "Your console will have zero errors today.",
+      "A cup of coffee will solve your programming bug."
+    ];
+
+    // Function to change the fortune when button is clicked
+    function changeFortune() {
+      // Get a random index from the array
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      
+      // Update the text in the paragraph element
+      document.getElementById("fortune-text").innerText = fortunes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
